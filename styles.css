@@ -123,6 +123,14 @@ a:hover {
     text-decoration: underline;
 }
 
+.separator {
+    margin: 1rem auto;
+    border: 0;
+    height: 2px;
+    width: 80%;
+    background: linear-gradient(to right, #003366, #4da6ff, #003366);
+}
+
 .profile-photo {
     width: 200px;
     height: 200px;
