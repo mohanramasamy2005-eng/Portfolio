@@ -12,7 +12,9 @@ This is a professional portfolio website built with HTML, CSS, and JavaScript. I
 - `index.html`: The main HTML structure of the portfolio website
 - `styles.css`: CSS styles for layout, colors, and responsiveness (blue and white theme)
 - `script.js`: JavaScript for interactivity, including smooth scrolling and project alerts
-- `indes.java`: A sample Java program demonstrating basic programming concepts (unrelated to the web portfolio)
+- `index.java`: A sample Java program demonstrating basic programming concepts
+- `about.html`: Additional about page with detailed background information
+- `certificate.html`: Certification and credentials page
 - `Mohan linkedin profile.jpeg`: Profile photo (ensure this image file is in the same folder)
 
 ## How to Run
@@ -28,6 +30,18 @@ This is a professional portfolio website built with HTML, CSS, and JavaScript. I
 
 ## Technologies Used
 - HTML5
+- CSS3
+- JavaScript (ES6+)
+- Responsive Web Design
+
+## Browser Support
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+## License
+MIT License - Feel free to use this portfolio as a template for your own.
 - CSS3
 - JavaScript (ES6)
 - Java (for the sample program)
