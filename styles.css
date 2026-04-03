@@ -98,6 +98,37 @@ nav a:hover {
 
 section {
     padding: 3rem 2rem;
+}
+
+.project-item {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
+}
+
+.project-item h3 {
+    color: #4da6ff;
+    margin-top: 0;
+}
+
+.tags {
+    display: inline-block;
+    background-color: #e6f2ff;
+    color: #4da6ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
     margin: 2rem auto;
     max-width: 1000px;
     background-color: #ffffff;
