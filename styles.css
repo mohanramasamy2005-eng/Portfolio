@@ -93,9 +93,20 @@ section { padding: 3rem 2rem; }
 #about {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 2rem;
+}
+
+.about-left {
+  flex: 1;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.about-right {
+  flex: 1;
   text-align: center;
 }
 
@@ -146,11 +157,10 @@ section { padding: 3rem 2rem; }
 .skill:hover { transform: scale(1.05); }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 350px;
+  height: 450px;
   object-fit: cover;
-  margin: 1rem auto;
+  margin: 0 auto;
   display: block;
   border: 4px solid var(--primary);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -187,6 +197,19 @@ a:hover { text-decoration: underline; }
   section { padding: 2rem 1rem; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .btn { width: 200px; text-align: center; }
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .about-left {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media (max-width: 480px) {
