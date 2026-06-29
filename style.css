@@ -3,28 +3,25 @@
     padding: 0%;
 }
 .nav{
-    display: flex;
-    text-align: center;
-    width: 100%;
+    background-image: url(portfolio_first_page.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 nav{
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: yellow;
-    padding: 20px;
+    padding: 20px;  
 }
 .name{
     width:100%;
-    background-color:yellow;
-    display:flex;
-    justify-content:center;
-    padding-right: 50px;
-    
+    display:flex; 
 }
 .home{
     list-style:none;
     display:flex;
+    justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-left: 1300px;
-  
 }
