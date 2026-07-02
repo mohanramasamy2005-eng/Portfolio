@@ -8,7 +8,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;  
+    min-height: 100vh;
 }
 nav{
     display: flex;
@@ -96,8 +96,7 @@ nav{
     font-size: 1.1rem;
     border-radius: 20px;
 }
-.image-circle{
-    width: 400px;
+.profile-image{
     height: fit-content;
     /* background-color: red; */
 }
