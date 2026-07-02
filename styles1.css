@@ -51,16 +51,27 @@ nav a {
 nav a:hover { background: var(--primary); color: var(--white); }
 
 #home {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
   color: var(--white);
   text-align: center;
-  padding: 5rem 2rem;
   animation: fadeIn 1s ease-out;
 }
-
-#home h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-#home h2 { font-size: 2.5rem; margin-bottom: 1rem; animation: fadeIn 1s ease-out 0.2s both; }
-#home p { font-size: 1.2rem; margin-bottom: 2rem; animation: fadeIn 1s ease-out 0.4s both; }
+#home h1 { 
+  font-size: 3rem; 
+  margin-bottom: 0.5rem;
+ }
+#home h2 { 
+  font-size: 2.5rem; 
+  margin-bottom: 1rem; 
+  animation: fadeIn 1s ease-out 0.2s both;
+ }
+#home p { 
+  font-size: 1.2rem; 
+  margin-bottom: 2rem; 
+  animation: fadeIn 1s ease-out 0.4s both;
+ }
 
 .btn {
   display: inline-block;
@@ -88,7 +99,9 @@ nav a:hover { background: var(--primary); color: var(--white); }
   margin-top: 1rem;
 }
 
-section { padding: 3rem 2rem; }
+section { 
+  padding: 3rem 2rem; 
+}
 
 #about {
   height: 100vh;
@@ -101,7 +114,7 @@ section { padding: 3rem 2rem; }
 
 .about-left {
   flex: 1;
-  text-align: left;
+  /* text-align: left; */
   padding-right: 2rem;
 }
 
@@ -154,7 +167,9 @@ section { padding: 3rem 2rem; }
   transition: transform 0.3s ease;
 }
 
-.skill:hover { transform: scale(1.05); }
+.skill:hover { 
+  transform: scale(1.05); 
+}
 
 .profile-photo {
   width: 350px;
@@ -174,8 +189,13 @@ section { padding: 3rem 2rem; }
   max-width: 1000px;
 }
 
-a { color: var(--primary); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { 
+  color: var(--primary); 
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: underline; 
+}
 
 @keyframes fadeIn {
   from { opacity: 0; }
