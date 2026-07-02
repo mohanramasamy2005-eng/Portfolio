@@ -3,6 +3,9 @@
     padding: 0%;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-image: url("./images/HomePG.png");
     background-size: cover;
@@ -96,9 +99,10 @@ nav{
     font-size: 1.1rem;
     border-radius: 20px;
 }
-.profile-image{
+.div-right{
     height: fit-content;
-    /* background-color: red; */
+    width: fit-content;
+    /* background-color: rgb(0, 4, 226); */
 }
 .image{
     margin-left: 55vw;
@@ -106,4 +110,17 @@ nav{
     border-radius: 50%;
     overflow: hidden;
     width: fit-content;
+    
 }
+#about{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 0, 0);
+    padding: 50px 80px;
+}
+/* .div-left{
+    width: fit-content;
+    height: fit-content;
+    background-color: green;
+} */
