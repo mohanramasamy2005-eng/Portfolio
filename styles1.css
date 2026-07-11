@@ -58,6 +58,10 @@ nav a:hover { background: var(--primary); color: var(--white); }
   text-align: center;
   animation: fadeIn 1s ease-out;
 }
+#home {
+  background: rgb(0, 51, 102);
+  color: white;
+}
 #home h1 { 
   font-size: 3rem; 
   margin-bottom: 0.5rem;
@@ -114,7 +118,7 @@ section {
 
 .about-left {
   flex: 1;
-  /* text-align: left; */
+  text-align: left;
   padding-right: 2rem;
 }
 
