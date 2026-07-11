@@ -50,7 +50,7 @@ nav a {
 
 nav a:hover { background: var(--primary); color: var(--white); }
 
-#home {
+.container {
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
