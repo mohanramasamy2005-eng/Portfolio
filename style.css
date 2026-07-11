@@ -7,10 +7,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-image: url("./images/Black\ White\ Grayscale\ Portfolio\ Presentation\ \(3\).png");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
     /* color: white; */
     /* height:100vh; */
     font-family:"Merriweather", serif;
@@ -68,6 +64,11 @@ nav{
     height: fit-content;
     height: 100vh;
     */
+    /* background-image: url("./images/Black\ White\ Grayscale\ Portfolio\ Presentation\ \(3\).png");
+    background-size: cover; */
+    /* background-position: top; */
+    /* background-repeat: no-repeat; */
+
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -212,4 +213,40 @@ button:hover{
 .about-left p{
     line-height:2;
     font-size:1.1rem;
+}
+#resume{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px;
+    background: white;
+    color: black;
+}
+#skills{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px;
+    background:#111;
+    color: white;
+}
+#projects{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px;
+    background:white;
+    color: black;
+}
+#contact{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px;
+    background:#111;
+    color: white;
 }
