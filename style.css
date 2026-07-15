@@ -56,6 +56,13 @@ nav {
 .home-bar a:hover {
   color: black;
 }
+.sidebar {
+  position: absolute;
+  width: 10px;
+  height: 40%;
+  background-color: rgba(255, 166, 0, 0.814);
+  /* background-color:rgba(204, 140, 11, 0.433); */
+}
 #home {
   /* 
     padding-top: 19vh;
