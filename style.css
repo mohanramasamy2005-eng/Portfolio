@@ -258,3 +258,31 @@ button:hover {
   background: #111;
   color: white;
 }
+.project-item,
+.experience-item,
+.certificate-item,
+.project {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+.skill {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* transition: transform 0.3s ease; */
+  background-color: white;
+  color: black;
+}
+.skill:hover {
+  transform: scale(1.05);
+}
