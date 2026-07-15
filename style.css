@@ -57,21 +57,24 @@ nav {
   color: black;
 }
 #home {
-  /* 
-    padding-top: 19vh;
-    margin-left: 13vw;
-    width: fit-content;
-    height: fit-content;
-    height: 100vh;
-    */
-  /* background-image: url("./images/Black\ White\ Grayscale\ Portfolio\ Presentation\ \(3\).png");
-    background-size: cover; */
-  /* background-position: top; */
-  /* background-repeat: no-repeat; */
-
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+.sidebar1,
+.sidebar2 {
+  position: absolute;
+  /* top: 0; */
+  width: 65px;
+  height: 50%;
+  background-color: rgba(255, 166, 0, 0.814);
+}
+.sidebar1 {
+  left: 0;
+}
+.sidebar2 {
+  right: 0;
 }
 .container {
   width: 100%;
