@@ -62,47 +62,106 @@
           <div><strong>2024–25</strong><span>Continuous learning</span></div>
         </div>
 
-        <div class="projects-tabs course-tabs" role="tablist" aria-label="Certificate categories">
-          <button class="tab course-tab active" type="button" data-filter="all">ALL</button>
-          <button class="tab course-tab" type="button" data-filter="core">CORE CERTIFICATIONS</button>
+        <div
+          class="projects-tabs course-tabs"
+          role="tablist"
+          aria-label="Certificate categories"
+        >
+          <button class="tab course-tab active" type="button" data-filter="all">
+            ALL
+          </button>
+          <button class="tab course-tab" type="button" data-filter="core">
+            CORE CERTIFICATIONS
+          </button>
         </div>
 
         <div class="course-grid">
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Black White Grayscale Portfolio Presentation (3).png" alt="Remote Sensing certificate" /></div>
-            <h3>REMOTE SENSING</h3><p>Indian Institute of Remote Sensing, ISRO Dehradun</p>
+            <div class="course-image">
+              <img
+                src="./images/Black White Grayscale Portfolio Presentation (3).png"
+                alt="Remote Sensing certificate"
+              />
+            </div>
+            <h3>REMOTE SENSING</h3>
+            <p>Indian Institute of Remote Sensing, ISRO Dehradun</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Mohan AI photo.jpg" alt="C Programming certificate" /></div>
-            <h3>C PROGRAMMING</h3><p>PrepInsta</p>
+            <div class="course-image">
+              <img
+                src="./images/Mohan AI photo.jpg"
+                alt="C Programming certificate"
+              />
+            </div>
+            <h3>C PROGRAMMING</h3>
+            <p>PrepInsta</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Phone Wallpaper.jpg" alt="DSA in C certificate" /></div>
-            <h3>DSA IN C</h3><p>PrepInsta</p>
+            <div class="course-image">
+              <img
+                src="./images/Phone Wallpaper.jpg"
+                alt="DSA in C certificate"
+              />
+            </div>
+            <h3>DSA IN C</h3>
+            <p>PrepInsta</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Mohan linkedin profile.jpeg" alt="OOPS using Java certificate" /></div>
-            <h3>OOPS USING JAVA</h3><p>Great Learning</p>
+            <div class="course-image">
+              <img
+                src="./images/Mohan linkedin profile.jpeg"
+                alt="OOPS using Java certificate"
+              />
+            </div>
+            <h3>OOPS USING JAVA</h3>
+            <p>Great Learning</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Blacers Profectional image.jpeg" alt="AI Chatbot using NLP certificate" /></div>
-            <h3>AI CHATBOT USING NLP</h3><p>Novi Tech</p>
+            <div class="course-image">
+              <img
+                src="./images/Blacers Profectional image.jpeg"
+                alt="AI Chatbot using NLP certificate"
+              />
+            </div>
+            <h3>AI CHATBOT USING NLP</h3>
+            <p>Novi Tech</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Mohan AI photo.jpg" alt="C++ Programming certificate" /></div>
-            <h3>C++ PROGRAMMING</h3><p>PrepInsta</p>
+            <div class="course-image">
+              <img
+                src="./images/Mohan AI photo.jpg"
+                alt="C++ Programming certificate"
+              />
+            </div>
+            <h3>C++ PROGRAMMING</h3>
+            <p>PrepInsta</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Phone Wallpaper.jpg" alt="AWS certificate" /></div>
-            <h3>AWS</h3><p>PrepInsta</p>
+            <div class="course-image">
+              <img src="./images/Phone Wallpaper.jpg" alt="AWS certificate" />
+            </div>
+            <h3>AWS</h3>
+            <p>PrepInsta</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Black White Grayscale Portfolio Presentation (3).png" alt="Embedded Systems certificate" /></div>
-            <h3>COM. USING PROTOCOL IN EMBEDDED SYSTEMS</h3><p>Novi Tech</p>
+            <div class="course-image">
+              <img
+                src="./images/Black White Grayscale Portfolio Presentation (3).png"
+                alt="Embedded Systems certificate"
+              />
+            </div>
+            <h3>COM. USING PROTOCOL IN EMBEDDED SYSTEMS</h3>
+            <p>Novi Tech</p>
           </article>
           <article class="course-card" data-category="core">
-            <div class="course-image"><img src="./images/Mohan linkedin profile.jpeg" alt="RISC-V Processor certificate" /></div>
-            <h3>RISC-V PROCESSOR</h3><p>Maven Silicon</p>
+            <div class="course-image">
+              <img
+                src="./images/Mohan linkedin profile.jpeg"
+                alt="RISC-V Processor certificate"
+              />
+            </div>
+            <h3>RISC-V PROCESSOR</h3>
+            <p>Maven Silicon</p>
           </article>
         </div>
       </section>
@@ -120,13 +179,13 @@
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
-              href="https://github.com"
+              href="https://github.com/mohanramasamy2005-eng"
               target="_blank"
               class="social-icon github"
               ><i class="fab fa-github"></i
             ></a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/919047719620"
               target="_blank"
               class="social-icon whatsapp"
               ><i class="fab fa-whatsapp"></i
@@ -150,15 +209,19 @@
       </div>
     </footer>
     <script>
-      const courseTabs = document.querySelectorAll('.course-tab');
-      const courseCards = document.querySelectorAll('.course-card');
-      courseTabs.forEach((tab) => tab.addEventListener('click', () => {
-        const filter = tab.dataset.filter;
-        courseTabs.forEach((item) => item.classList.toggle('active', item === tab));
-        courseCards.forEach((card) => {
-          card.hidden = filter !== 'all' && card.dataset.category !== filter;
-        });
-      }));
+      const courseTabs = document.querySelectorAll(".course-tab");
+      const courseCards = document.querySelectorAll(".course-card");
+      courseTabs.forEach((tab) =>
+        tab.addEventListener("click", () => {
+          const filter = tab.dataset.filter;
+          courseTabs.forEach((item) =>
+            item.classList.toggle("active", item === tab),
+          );
+          courseCards.forEach((card) => {
+            card.hidden = filter !== "all" && card.dataset.category !== filter;
+          });
+        }),
+      );
     </script>
   </body>
 </html>
