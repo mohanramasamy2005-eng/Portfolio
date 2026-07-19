@@ -2,6 +2,8 @@
 const header = document.querySelector("header");
 let ignoreAutoHide = false;
 const headerHeight = header ? header.offsetHeight : 0;
+let activeLinkLocked = false;
+let lockedActiveHref = "#home";
 
 const navLinks = document.querySelectorAll(".home-bar a");
 
@@ -33,12 +35,33 @@ const setActiveLinkByHref = (href) => {
   });
 };
 
+const showAllSections = () => {
+  document.querySelectorAll("section[id]").forEach((section) => {
+    section.classList.remove("section-hidden");
+  });
+};
+
+const showOnlySection = (hash) => {
+  const target = document.querySelector(hash);
+  if (!target) return;
+  document.querySelectorAll("section[id]").forEach((section) => {
+    section.classList.toggle("section-hidden", section !== target);
+  });
+};
+
+const setActiveHomeOnly = () => {
+  navLinks.forEach((link) => {
+    const linkHref = normalizeHref(link.getAttribute("href"));
+    link.classList.toggle("active", linkHref === "#home");
+  });
+};
+
 const isIndexPage = () => {
   const currentPath = window.location.pathname.split("/").pop();
   return currentPath === "" || currentPath === "index.html";
 };
 
-const scrollToHashTarget = (hash) => {
+const scrollToHashTarget = (hash, behavior = "auto") => {
   if (!hash) return;
   const target = document.querySelector(hash);
   if (!target) return;
@@ -50,7 +73,31 @@ const scrollToHashTarget = (hash) => {
   const offset = headerHeight + 10;
   window.scrollTo({
     top: Math.max(targetTop - offset, 0),
-    behavior: "auto",
+    behavior,
+  });
+};
+
+const navigateToSection = (href) => {
+  const target = document.querySelector(href);
+  if (!target) return;
+
+  if (href === "#home") {
+    activeLinkLocked = false;
+    lockedActiveHref = "#home";
+    showAllSections();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    return;
+  }
+
+  activeLinkLocked = true;
+  lockedActiveHref = href;
+  showOnlySection(href);
+
+  requestAnimationFrame(() => {
+    scrollToHashTarget(href, "smooth");
   });
 };
 
@@ -58,23 +105,19 @@ navLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     const href = this.getAttribute("href");
 
-    if (href.startsWith("#")) {
+    if (link.classList.contains("dropdown-toggle")) {
+      e.preventDefault();
+      return;
+    }
+
+    if (href && href.startsWith("#") && href !== "#") {
       const target = document.querySelector(href);
 
       if (target) {
         e.preventDefault();
         ignoreAutoHide = true;
         header.classList.remove("hidden");
-        const scrollTarget =
-          target.querySelector(".about-panel, .career-panel, .section-panel") ||
-          target;
-        const targetTop =
-          scrollTarget.getBoundingClientRect().top + window.pageYOffset;
-        const offset = headerHeight + 10;
-        window.scrollTo({
-          top: Math.max(targetTop - offset, 0),
-          behavior: "smooth",
-        });
+        navigateToSection(href);
         history.replaceState(null, "", href);
         setActiveLinkByHref(href);
         setTimeout(() => {
@@ -82,6 +125,9 @@ navLinks.forEach((link) => {
         }, 700);
       }
     } else {
+      if (href === "#") {
+        e.preventDefault();
+      }
       setActiveLinkByHref(href);
     }
   });
@@ -107,10 +153,25 @@ const activateCurrentNavLink = () => {
 window.addEventListener("load", () => {
   activateCurrentNavLink();
   if (window.location.hash) {
-    scrollToHashTarget(window.location.hash);
+    if (window.location.hash === "#home") {
+      showAllSections();
+      scrollToHashTarget(window.location.hash);
+    } else {
+      activeLinkLocked = true;
+      lockedActiveHref = window.location.hash;
+      showOnlySection(window.location.hash);
+      scrollToHashTarget(window.location.hash);
+    }
   }
 });
-window.addEventListener("popstate", activateCurrentNavLink);
+window.addEventListener("popstate", () => {
+  activateCurrentNavLink();
+  if (window.location.hash && window.location.hash !== "#home") {
+    showOnlySection(window.location.hash);
+  } else {
+    showAllSections();
+  }
+});
 
 // Add active link highlighting on scroll
 let lastScrollY = window.pageYOffset;
@@ -126,22 +187,13 @@ window.addEventListener("touchmove", () => {
 window.addEventListener("scroll", () => {
   if (!isIndexPage()) return;
 
-  const sections = document.querySelectorAll("section[id]");
-  let current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.classList.remove("active");
-    if (normalizeHref(link.getAttribute("href")) === "#" + current) {
-      link.classList.add("active");
-    }
-  });
+  if (activeLinkLocked) {
+    setActiveLinkByHref(lockedActiveHref);
+  } else if (window.location.hash && window.location.hash !== "#home") {
+    setActiveLinkByHref(window.location.hash);
+  } else {
+    setActiveHomeOnly();
+  }
 
   if (!ignoreAutoHide) {
     const currentScrollY = window.pageYOffset;
