@@ -314,6 +314,8 @@ section#portfolio,
   line-height: 1.03;
   letter-spacing: 0.02em;
 }
+/* Increase spacing between the eyebrow and the heading for better visual balance */
+
 .experience-panel .section-heading p {
   max-width: 760px;
 }
@@ -597,6 +599,28 @@ section#portfolio:not(.portfolio-page) .project-tag {
   width: fit-content;
 }
 
+/* Career section button styling to match About section */
+#career .resume-button,
+.career-left .resume-button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#career .resume-button:hover,
+.career-left .resume-button:hover {
+  background: #ff9f1c;
+  color: black;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 960px) {
   .career-section {
     flex-direction: column;
@@ -690,6 +714,28 @@ section#portfolio:not(.portfolio-page) .project-tag {
 
 .about-actions .hire-button:hover,
 .about-actions .resume-button:hover {
+  background: #ff9f1c;
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Home section button styling to match About section */
+#home .buttons .hire-button,
+#home .buttons .resume-button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: black;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#home .buttons .hire-button:hover,
+#home .buttons .resume-button:hover {
   background: #ff9f1c;
   color: black;
   transform: translateY(-2px);
@@ -1168,6 +1214,10 @@ section#portfolio:not(.portfolio-page) .project-tag {
   font-size: 0.78rem !important;
   font-weight: 800;
   letter-spacing: 0.12em;
+}
+/* Increase spacing between the eyebrow and the heading for better visual balance */
+.experience-eyebrow {
+  margin-bottom: 20px;
 }
 
 .experience-summary {
